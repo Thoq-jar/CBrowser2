@@ -1,0 +1,41 @@
+#!/bin/bash
+
+if ! command -v python3 &> /dev/null; then
+    echo "Python3 is not installed. Please install Python3."
+    exit 1
+fi
+
+if ! command -v meson &> /dev/null; then
+    echo "Meson is not installed. Please install Meson."
+    exit 1
+fi
+
+if ! python3 -m http.server --help &> /dev/null; then
+    echo "http.server module is not available in Python3."
+    exit 1
+fi
+
+if lsof -i :54654; then
+    kill $(lsof -t -i :54654)
+fi
+
+cd browser
+python3 -m http.server 54654 &
+
+SERVER_PID=$!
+
+sleep 0.5
+
+cd ..
+
+meson compile -C builddir
+
+./builddir/purrooser
+
+kill $SERVER_PID
+
+if lsof -i :54654; then
+    kill $(lsof -t -i :54654)
+fi
+
+exit 0

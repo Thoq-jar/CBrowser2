@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Settings</title>
+    <link rel="stylesheet" href="lib/std.css">
+    <link rel="stylesheet" href="settings/settings.css">
+    <script src="https://code.jquery.com/jquery-4.0.0-beta.js" integrity="sxrFXxuY0kAVWIe4oGEKMK3Ww9GRVoB6Z+sAuiT+aEM="
+            crossorigin="anonymous"></script>
+    <script src="lib/std.js"></script>
+    <script src="settings/settings.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="left-wrapper">
+        <h1 class="title">Settings</h1>
+        <label for="search-bar"></label><input type="text" id="search-bar" placeholder="Search settings..."/>
+        <div class="tabs">
+            <button class="tab" data-content="general">General</button>
+            <button class="tab" data-content="privacy">Privacy</button>
+            <button class="tab" data-content="appearance">Appearance</button>
+            <button class="tab" data-content="about">About</button>
+        </div>
+    </div>
+    <div class="right-wrapper">
+        <div id="settings-content">
+            <div class="content" id="general">
+                <p>Default Search Engine:
+                    <label>
+                        <select>
+                            <option>DuckDuckGo</option>
+                            <option>Google</option>
+                            <option>Bing</option>
+                        </select>
+                    </label>
+                </p>
+            </div>
+
+            <div class="content" id="privacy" style="display: none;">
+                <p>Send Do Not Track request:
+                    <label>
+                        <input type="checkbox" checked/>
+                    </label>
+                </p>
+
+                <p>Clear browsing data on exit:
+                    <label>
+                        <input type="checkbox"/>
+                    </label>
+                </p>
+            </div>
+
+            <div class="content" id="appearance" style="display: none;">
+                <p>Font Size:
+                    <label>
+                        <select>
+                            <option>Small</option>
+                            <option>Medium</option>
+                            <option>Large</option>
+                        </select>
+                    </label>
+                </p>
+            </div>
+
+            <div class="content" id="about" style="display: none;">
+                <iframe class="about" src="about.html"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

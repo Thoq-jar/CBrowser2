@@ -1,0 +1,38 @@
+* {
+  -fx-font-family: -apple-system, "Segoe UI", sans-serif;
+  -fx-text-fill: white;
+}
+
+VBox {
+  -fx-background-color: #202124;
+}
+
+HBox {
+  -fx-padding: 10;
+  -fx-background-color: #202124;
+}
+
+.nav-button {
+  -fx-background-color: #333;
+  -fx-padding: 10px 20px;
+  -fx-border-radius: 5px;
+  -fx-background-radius: 5px;
+  -fx-cursor: hand;
+}
+
+.nav-button:hover {
+  -fx-background-color: #444;
+}
+
+TabPane:selected, TabPane, .tab-pane, .tab-pane:selected {
+  -fx-background-color: #202124 !important;
+}
+
+.tab {
+  -fx-border-radius: 100px;
+  -fx-background-color: #333;
+}
+
+.tab:hover {
+  -fx-background-color: #444;
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="dev.thoq.purrooser.Controller" stylesheets="@layout.css">
+
+    <HBox spacing="10.0">
+        <Button text="←" onAction="#goBack" styleClass="nav-button"/>
+        <Button text="→" onAction="#goForward" styleClass="nav-button"/>
+        <Button fx:id="reloadButton" text="↻" onAction="#reloadPage" styleClass="nav-button"/>
+        <Button text="⌂" onAction="#goHome" styleClass="nav-button"/>
+        <Button fx:id="addTabButton" text="+" onAction="#addTab" styleClass="nav-button"/>
+    </HBox>
+
+    <TabPane fx:id="tabPane" styleClass="tab-pane" VBox.vgrow="ALWAYS"/>
+</VBox>

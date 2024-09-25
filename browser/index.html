@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Start Page</title>
+    <link rel="stylesheet" href="core/core.css">
+    <script src="https://code.jquery.com/jquery-4.0.0-beta.js" integrity="sxrFXxuY0kAVWIe4oGEKMK3Ww9GRVoB6Z+sAuiT+aEM=" crossorigin="anonymous"></script>
+    <script src="core/core.js" type="module"></script>
+</head>
+<body>
+<div class="overlay"></div>
+<div id="weather" class="weather-container">
+    <span id="city"></span>
+    <img id="weather-icon" class="weather-icon" src="" alt="Weather Icon"/>
+    <span id="temperature"></span>
+</div>
+<div id="weather-description" class="weather-description blur-10px"></div>
+
+<div class="no-select">
+    <h1 class="title">Purrooser</h1>
+</div>
+
+<div class="container no-select">
+    <div class="search-container" id="searchContainer">
+        <label for="searchBar" class="search-bar">
+            <input type="text" id="searchBar" class="blur-10px" placeholder="Search for anything..."/>
+        </label>
+
+        <button id="searchButton" class="go blur-10px">Go</button>
+    </div>
+</div>
+</body>
+</html>
